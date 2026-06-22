@@ -1,0 +1,31 @@
+{
+  "event_type": "EMAIL_SENT",
+  "secret_key": "REPLACE_ME",
+  "time_sent": 1750600000,
+  "event_timestamp": "2026-06-22T10:30:00Z",
+  "webhook_id": "wh_abc123",
+  "webhook_name": "New Leads Webhook",
+  "stats_id": "stat_9f8e7d",
+  "sl_email_lead_id": "lead_001",
+  "sl_email_lead_map_id": "map_002",
+  "client_id": "42",
+  "campaign_id": "camp_77",
+  "campaign_name": "Acme Outreach Q3",
+  "campaign_status": "ACTIVE",
+  "sequence_number": 3,
+  "from_email": "jane@acme.com",
+  "to_email": "john@prospectcorp.com",
+  "to_name": "John Prospect",
+  "subject": "Let's discuss your project",
+  "custom_subject": "[OLD] Let's discuss your project",
+  "message_id": "msg_12345",
+  "sent_message": {
+    "message_id": "<20260622083001.abc@mail.acme.com>",
+    "html": "<html><body><p>Hi John,\n\nLet's discuss your project. Our team has built something special.</p><p>Best,<br/>Jane</p></body></html>",
+    "text": "Hi John,\n\nLet's discuss your project. Our team has built something special.\n\nBest,\nJane"
+  },
+  "sent_message_body": "<p>[DEPRECATED: old sent_message_body]</p>",
+  "custom_email_message": "<p>[DEPRECATED: old custom_email_message]</p>",
+  "app_url": "https://app.smartlead.ai/app/master-inbox/42/77",
+  "ui_master_inbox_link": "https://app.smartlead.ai/app/master-inbox/42/77"
+}
