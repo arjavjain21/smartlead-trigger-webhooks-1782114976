@@ -2,6 +2,7 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import type { NormalizedEmailSent } from "./smartlead-normalizer";
 import { stripSecretKey } from "./smartlead-normalizer";
 import { toErrorMessage, toErrorStack } from "./errors";
+import { WebSocket } from "ws";
 
 let _client: SupabaseClient | null = null;
 
@@ -13,6 +14,12 @@ export interface SupabaseConfig {
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return createClient(config.url, config.secretKey, {
     auth: { persistSession: false, autoRefreshToken: false },
+    // Provide WebSocket polyfill for Node.js < 22. Trigger.dev runtime uses Node 21,
+    // and Supabase's realtime module requires native WebSocket support.
+    // This avoids the "Node.js 21 detected without native WebSocket support" error.
+    realtime: {
+      options: { ws: WebSocket },
+    },
   });
 }
 

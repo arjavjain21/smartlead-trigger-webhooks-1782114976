@@ -22,11 +22,13 @@
     "@trigger.dev/sdk": "^4.4.6",
     "dotenv": "^17.4.2",
     "hono": "^4.12.26",
+    "ws": "^8.21.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
     "@trigger.dev/build": "^4.4.6",
     "@types/node": "^26.0.0",
+    "@types/ws": "^8.18.1",
     "tsx": "^4.22.4",
     "typescript": "^5.9.3",
     "vitest": "^4.1.9"
