@@ -18,7 +18,7 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
     // and Supabase's realtime module requires native WebSocket support.
     // This avoids the "Node.js 21 detected without native WebSocket support" error.
     realtime: {
-      options: { ws: WebSocket },
+      transport: WebSocket as any,
     },
   });
 }
